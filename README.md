@@ -1,5 +1,5 @@
 # DynamicFPCA_Causality
-######### Function DFPCA.test(X, Y, num, ndx, ndy, L, q)
+# Function DFPCA.test(X, Y, num, ndx, ndy, L, q)
 #
 # Non-causality test in the sense of Granger between functional observations X and Y if X cause Y.
 #
