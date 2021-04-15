@@ -36,9 +36,9 @@ DFPCA.test <- function(X, Y, num, ndx, ndy, L = 30,
 
 
 ##### Example
-
-data<-  simul.farx(m=25,n=100,base=base.simul.far(24,5),
-                   base.exo=base.simul.far(24,5),
+num<-20
+data<-  simul.farx(m=num,n=100,base=base.simul.far(2*num,5),
+                   base.exo=base.simul.far(2*num,5),
                    d.a=matrix(c(0.5,0),nrow=1,ncol=2),
                    alpha.conj=matrix(c(0.2,0),nrow=1,ncol=2),
                    d.rho=diag(c(0.45,0.90,0.34,0.45)),
@@ -49,6 +49,6 @@ y <- select.fdata(data,name="X")
 x <- select.fdata(data,name="Z")
 data<-as.fdata(list("X"=x[[1]],"Y"=y[[1]]))
 #plot of the two whole series
-multplot(data,xval=seq(from=0,to=100-0.04,by=0.04),whole=T,legend = T)
+multplot(data,xval=seq(from=0,to=100-1/num,by=1/num),whole=T,legend = T)
 # test with 2 DFPCA
-DFPCA.test(data$X,data$Y,num=25,ndx = 2, ndy = 2)
+DFPCA.test(data$X,data$Y,num=num,ndx = 2, ndy = 2)
