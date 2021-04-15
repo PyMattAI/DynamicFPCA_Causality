@@ -45,8 +45,8 @@ data<-  simul.farx(m=25,n=100,base=base.simul.far(24,5),
                    alpha=diag(c(0.5,0.23,0.018)),
                    d.rho.exo=diag(c(0.45,0.90,0.34,0.45)),
                    cst1=0.05)
-x <- select.fdata(data,name="X")
-y <- select.fdata(data,name="Z")
+y <- select.fdata(data,name="X")
+x <- select.fdata(data,name="Z")
 data<-as.fdata(list("X"=x[[1]],"Y"=y[[1]]))
 #plot of the two whole series
 multplot(data,xval=seq(from=0,to=100-0.04,by=0.04),whole=T,legend = T)
