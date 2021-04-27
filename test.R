@@ -36,8 +36,8 @@ DFPCA.test <- function(X, Y, num, ndx, ndy, L = 30,
 
 
 ##### Example
-num <-20
-data <-  simul.farx(m=num,n=100,base=base.simul.far(2*num,5),
+num <- 20
+data <- simul.farx(m=num,n=100,base=base.simul.far(2*num,5),
                    base.exo=base.simul.far(2*num,5),
                    d.a=matrix(c(0.5,0),nrow=1,ncol=2),
                    alpha.conj=matrix(c(0.2,0),nrow=1,ncol=2),
